@@ -1,0 +1,3 @@
+/home/niuniu10/employee/build/CMakeFiles/employee.dir
+/home/niuniu10/employee/build/CMakeFiles/edit_cache.dir
+/home/niuniu10/employee/build/CMakeFiles/rebuild_cache.dir
