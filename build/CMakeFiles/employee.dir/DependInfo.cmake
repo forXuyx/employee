@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/niuniu10/employee/empoloyeeManager.cpp" "CMakeFiles/employee.dir/empoloyeeManager.cpp.o" "gcc" "CMakeFiles/employee.dir/empoloyeeManager.cpp.o.d"
   "/home/niuniu10/employee/main.cpp" "CMakeFiles/employee.dir/main.cpp.o" "gcc" "CMakeFiles/employee.dir/main.cpp.o.d"
+  "/home/niuniu10/employee/manager.cpp" "CMakeFiles/employee.dir/manager.cpp.o" "gcc" "CMakeFiles/employee.dir/manager.cpp.o.d"
+  "/home/niuniu10/employee/worker.cpp" "CMakeFiles/employee.dir/worker.cpp.o" "gcc" "CMakeFiles/employee.dir/worker.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

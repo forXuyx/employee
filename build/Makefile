@@ -177,6 +177,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+manager.o: manager.cpp.o
+.PHONY : manager.o
+
+# target to build an object file
+manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/manager.cpp.o
+.PHONY : manager.cpp.o
+
+manager.i: manager.cpp.i
+.PHONY : manager.i
+
+# target to preprocess a source file
+manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/manager.cpp.i
+.PHONY : manager.cpp.i
+
+manager.s: manager.cpp.s
+.PHONY : manager.s
+
+# target to generate assembly for a file
+manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/manager.cpp.s
+.PHONY : manager.cpp.s
+
+worker.o: worker.cpp.o
+.PHONY : worker.o
+
+# target to build an object file
+worker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/worker.cpp.o
+.PHONY : worker.cpp.o
+
+worker.i: worker.cpp.i
+.PHONY : worker.i
+
+# target to preprocess a source file
+worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/worker.cpp.i
+.PHONY : worker.cpp.i
+
+worker.s: worker.cpp.s
+.PHONY : worker.s
+
+# target to generate assembly for a file
+worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/worker.cpp.s
+.PHONY : worker.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +240,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... manager.o"
+	@echo "... manager.i"
+	@echo "... manager.s"
+	@echo "... worker.o"
+	@echo "... worker.i"
+	@echo "... worker.s"
 .PHONY : help
 
 
