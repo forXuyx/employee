@@ -25,6 +25,7 @@ int main() {
                 em.Add_Emp();
                 break;
             case 2: // 显示职工
+                em.Show_Emp();
                 break;
             case 3: // 删除职工
                 break;

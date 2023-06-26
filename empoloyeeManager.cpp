@@ -167,6 +167,9 @@ void EmpoloyeeManager::Add_Emp()
         cout << "输入数据有误" << endl;
     }
 
+    cout << "按任意键继续..." << endl;
+    system("read -s -n 1 key");
+
     system("clear");
 }
 
@@ -240,4 +243,26 @@ void EmpoloyeeManager::init_Emp()
     }
 
     ifs.close();
+}
+
+void EmpoloyeeManager::Show_Emp()
+{
+    if (this->m_FileIsEmpty)
+    {
+        cout << "文件不存在或记录为空" << endl;
+    }
+    else
+    {
+        for (int i = 0; i < m_EmpNum; i ++ )
+        {
+            // 利用多态调用接口
+            this->m_EmpArray[i]->showInfo();
+        }
+    }
+
+    // 改代码等价于windows系统下的system("pause");
+    cout << "按任意键继续..." << endl;
+    system("read -s -n 1 key");
+
+    system("clear");
 }
