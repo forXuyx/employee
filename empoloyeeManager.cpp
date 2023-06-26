@@ -266,3 +266,59 @@ void EmpoloyeeManager::Show_Emp()
 
     system("clear");
 }
+
+int EmpoloyeeManager::IsExist(int id)
+{
+    int index = -1;
+
+    for (int i = 0; i < this->m_EmpNum; i ++ )
+    {
+        if (this->m_EmpArray[i]->m_Id == id)
+        {
+            index = i;
+
+            break;
+        }
+    }
+
+    return index;
+}
+
+void EmpoloyeeManager::Del_Emp()
+{
+    if (this->m_FileIsEmpty)
+    {
+        cout << "文件不存在或记录为空" << endl;
+    }
+    else
+    {
+        // 按照职工编号删除
+        cout << "请输入要删除的职工编号" << endl;
+        int id = 0;
+        cin >> id;
+
+        int index = this->IsExist(id);
+        if (index != -1)
+        {
+            for (int i = index; i < this->m_EmpNum - 1; i ++ )
+            {
+                this->m_EmpArray[i] = this->m_EmpArray[i + 1];
+            }
+            this->m_EmpNum -- ;
+
+            // 文件同步
+            this->save();
+
+            cout << "删除成功" << endl;
+        }
+        else
+        {
+            cout << "删除失败，未找到该职工" << endl;
+        }
+    }
+
+    cout << "按任意键继续..." << endl;
+    system("read -s -n 1 key");
+
+    system("clear");
+}

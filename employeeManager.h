@@ -54,6 +54,12 @@ public:
     // 显示职工信息
     void Show_Emp();
 
+    // 按照编号删除职工
+    void Del_Emp();
+
+    // 按照职工编号判断职工是否存在
+    int IsExist(int id);
+
     // 析构函数
     ~EmpoloyeeManager();
 };
