@@ -129,6 +129,30 @@ employee/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/build
 .PHONY : employee/fast
 
+boss.o: boss.cpp.o
+.PHONY : boss.o
+
+# target to build an object file
+boss.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/boss.cpp.o
+.PHONY : boss.cpp.o
+
+boss.i: boss.cpp.i
+.PHONY : boss.i
+
+# target to preprocess a source file
+boss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/boss.cpp.i
+.PHONY : boss.cpp.i
+
+boss.s: boss.cpp.s
+.PHONY : boss.s
+
+# target to generate assembly for a file
+boss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/boss.cpp.s
+.PHONY : boss.cpp.s
+
 empoloyeeManager.o: empoloyeeManager.cpp.o
 .PHONY : empoloyeeManager.o
 
@@ -201,6 +225,30 @@ manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/manager.cpp.s
 .PHONY : manager.cpp.s
 
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/employee.dir/build.make CMakeFiles/employee.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 worker.o: worker.cpp.o
 .PHONY : worker.o
 
@@ -234,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... employee"
+	@echo "... boss.o"
+	@echo "... boss.i"
+	@echo "... boss.s"
 	@echo "... empoloyeeManager.o"
 	@echo "... empoloyeeManager.i"
 	@echo "... empoloyeeManager.s"
@@ -243,6 +294,9 @@ help:
 	@echo "... manager.o"
 	@echo "... manager.i"
 	@echo "... manager.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 	@echo "... worker.o"
 	@echo "... worker.i"
 	@echo "... worker.s"

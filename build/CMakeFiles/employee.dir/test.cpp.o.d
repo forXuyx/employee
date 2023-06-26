@@ -1,6 +1,6 @@
-CMakeFiles/employee.dir/empoloyeeManager.cpp.o: \
- /home/niuniu10/employee/empoloyeeManager.cpp /usr/include/stdc-predef.h \
- /home/niuniu10/employee/employeeManager.h /usr/include/c++/9/iostream \
+CMakeFiles/employee.dir/test.cpp.o: /home/niuniu10/employee/test.cpp \
+ /usr/include/stdc-predef.h /home/niuniu10/employee/empoloyee.h \
+ /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -137,10 +137,5 @@ CMakeFiles/employee.dir/empoloyeeManager.cpp.o: \
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc /home/niuniu10/employee/empoloyee.h \
- /home/niuniu10/employee/worker.h /home/niuniu10/employee/manager.h \
- /home/niuniu10/employee/boss.h /usr/include/c++/9/fstream \
- /usr/include/c++/9/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
- /usr/include/c++/9/bits/fstream.tcc
+ /usr/include/c++/9/bits/istream.tcc /home/niuniu10/employee/worker.h \
+ /home/niuniu10/employee/manager.h /home/niuniu10/employee/boss.h

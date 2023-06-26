@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/employee.dir/main.cpp.o CMakeFiles/employee.dir/empoloyeeManager.cpp.o CMakeFiles/employee.dir/worker.cpp.o CMakeFiles/employee.dir/manager.cpp.o -o employee 
+/usr/bin/c++ CMakeFiles/employee.dir/main.cpp.o CMakeFiles/employee.dir/empoloyeeManager.cpp.o CMakeFiles/employee.dir/worker.cpp.o CMakeFiles/employee.dir/manager.cpp.o CMakeFiles/employee.dir/boss.cpp.o CMakeFiles/employee.dir/test.cpp.o -o employee 

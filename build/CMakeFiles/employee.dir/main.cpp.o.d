@@ -137,4 +137,10 @@ CMakeFiles/employee.dir/main.cpp.o: /home/niuniu10/employee/main.cpp \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/niuniu10/employee/employeeManager.h
+ /home/niuniu10/employee/employeeManager.h \
+ /home/niuniu10/employee/empoloyee.h /home/niuniu10/employee/worker.h \
+ /home/niuniu10/employee/manager.h /home/niuniu10/employee/boss.h \
+ /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
+ /usr/include/c++/9/bits/fstream.tcc
