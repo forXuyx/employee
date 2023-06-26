@@ -5,9 +5,19 @@
 
 EmpoloyeeManager::EmpoloyeeManager()
 {
-    this->m_EmpNum = 0;
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
 
-    this->m_EmpArray = NULL;
+    // 文件不存在情况
+    if (!ifs.is_open())
+    {
+        cout << "文件不存在" << endl;
+        this->m_EmpNum = 0;
+        this->m_FileIsEmpty = true;
+        this->m_EmpArray = NULL;
+        ifs.close();
+        return;
+    }
 }
 
 EmpoloyeeManager::~EmpoloyeeManager()

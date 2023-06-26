@@ -36,6 +36,9 @@ public:
     // 职工数组指针
     Empoloyee ** m_EmpArray;
 
+    // 标志文件是否为空
+    bool m_FileIsEmpty;
+
     // 添加职工
     void Add_Emp();
 
