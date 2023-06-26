@@ -11,7 +11,7 @@ EmpoloyeeManager::EmpoloyeeManager()
     // 文件不存在情况
     if (!ifs.is_open())
     {
-        cout << "文件不存在" << endl;
+        // cout << "文件不存在" << endl;
         this->m_EmpNum = 0;
         this->m_FileIsEmpty = true;
         this->m_EmpArray = NULL;
@@ -24,7 +24,7 @@ EmpoloyeeManager::EmpoloyeeManager()
     ifs >> ch;
     if (ifs.eof())
     {
-        cout << "文件为空" << endl;
+        // cout << "文件为空" << endl;
         this->m_EmpNum = 0;
         this->m_FileIsEmpty = true;
         this->m_EmpArray = NULL;
@@ -34,8 +34,20 @@ EmpoloyeeManager::EmpoloyeeManager()
 
     // 文件存在，并且记录数据
     int num = this->get_EmpNum();
-    cout << "职工人数为： "  << num << endl;
+    // cout << "职工人数为： "  << num << endl;
     this->m_EmpNum = num;
+
+    // 开辟空间
+    this->m_EmpArray = new Empoloyee*[this->m_EmpNum];
+    // 存储文件中的数据到数组
+    this->init_Emp();
+
+//    for (int i = 0; i < this->m_EmpNum; i ++ )
+//    {
+//        cout << "职工编号：" << this->m_EmpArray[i]->m_Id
+//             << "  姓名：" << this->m_EmpArray[i]->m_Name
+//             << "  部门编号：" << this->m_EmpArray[i]->m_DeptId << endl;
+//    }
 }
 
 EmpoloyeeManager::~EmpoloyeeManager()
@@ -192,4 +204,40 @@ int EmpoloyeeManager::get_EmpNum()
     ifs.close();
 
     return num;
+}
+
+void EmpoloyeeManager::init_Emp()
+{
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+
+    int id;
+    string name;
+    int dId;
+
+    int index = 0; // 数组索引
+    while (ifs >> id && ifs >> name && ifs >> dId) // 获取文件中的信息存入变量中
+    {
+        Empoloyee * empoloyee = NULL;
+
+        // 根据dId创建不同的对象
+        if (dId == 1)
+        {
+            empoloyee = new Worker(id, name, dId);
+        }
+        else if (dId == 2)
+        {
+            empoloyee = new Manager(id, name, dId);
+        }
+        else
+        {
+            empoloyee = new Boss(id, name, dId);
+        }
+
+        // 存放在数组中
+        this->m_EmpArray[index] = empoloyee;
+        index ++ ;
+    }
+
+    ifs.close();
 }
