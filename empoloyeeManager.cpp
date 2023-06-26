@@ -18,6 +18,24 @@ EmpoloyeeManager::EmpoloyeeManager()
         ifs.close();
         return;
     }
+
+    // 文件存在但没有记录
+    char ch;
+    ifs >> ch;
+    if (ifs.eof())
+    {
+        cout << "文件为空" << endl;
+        this->m_EmpNum = 0;
+        this->m_FileIsEmpty = true;
+        this->m_EmpArray = NULL;
+        ifs.close();
+        return;
+    }
+
+    // 文件存在，并且记录数据
+    int num = this->get_EmpNum();
+    cout << "职工人数为： "  << num << endl;
+    this->m_EmpNum = num;
 }
 
 EmpoloyeeManager::~EmpoloyeeManager()
@@ -123,6 +141,9 @@ void EmpoloyeeManager::Add_Emp()
         // 更新新的职工人数
         this->m_EmpNum = newSize;
 
+        // 更新职工不为空的标志
+        this->m_FileIsEmpty = false;
+
         // 提示添加成功
         cout << "成功添加" << addNum << "名职工" << endl;
 
@@ -150,4 +171,25 @@ void EmpoloyeeManager::save()
     }
 
     ofs.close();
+}
+
+int EmpoloyeeManager::get_EmpNum()
+{
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+
+    int id;
+    string name;
+    int dId;
+
+    int num = 0;
+
+    while (ifs >> id && ifs >> name && ifs >> dId)
+    {
+        // 记录人数
+        num ++ ;
+    }
+    ifs.close();
+
+    return num;
 }
