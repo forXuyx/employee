@@ -522,3 +522,40 @@ void EmpoloyeeManager::Sort_Emp()
         this->Show_Emp();
     }
 }
+
+void EmpoloyeeManager::Clean_File()
+{
+    cout << "确认清空？" << endl;
+    cout << "1.确认" << endl;
+    cout << "2.返回" << endl;
+
+    int select = 0;
+    cin >> select;
+
+    if (select == 1)
+    {
+        ofstream ofs(FILENAME, ios::trunc);
+        ofs.close();
+
+        if (this->m_EmpArray != NULL)
+        {
+            for (int i = 0; i < this->m_EmpNum; i ++ )
+            {
+                if (this->m_EmpArray[i] != NULL)
+                {
+                    delete this->m_EmpArray[i];
+                }
+            }
+            this->m_EmpNum = 0;
+            delete[] this->m_EmpArray;
+            this->m_EmpArray = NULL;
+            this->m_FileIsEmpty = true;
+        }
+        cout << "清空成功" << endl;
+    }
+
+    cout << "按任意键继续..." << endl;
+    system("read -s -n 1 key");
+
+    system("clear");
+}

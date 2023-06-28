@@ -40,6 +40,7 @@ int main() {
                 em.Sort_Emp();
                 break;
             case 7: // 清空文件
+                em.Clean_File();
                 break;
             default:
                 system("clear"); // linux下清屏操作
