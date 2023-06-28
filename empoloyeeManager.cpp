@@ -114,6 +114,11 @@ void EmpoloyeeManager::Add_Emp()
 
             cout << "请输入第" << i + 1 << "个新职工编号：" << endl;
             cin >> id;
+            while (this->IsExist(id) != -1)
+            {
+                cout << "该职工编号已存在，请重新输入：" << endl;
+                cin >> id;
+            }
 
             cout << "请输入第" << i + 1 << "个新职工姓名：" << endl;
             cin >> name;

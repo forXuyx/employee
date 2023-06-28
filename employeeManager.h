@@ -63,6 +63,8 @@ public:
     // 修改职工
     void Mod_Emp();
 
+    //
+
     // 析构函数
     ~EmpoloyeeManager();
 };
