@@ -60,6 +60,9 @@ public:
     // 按照职工编号判断职工是否存在
     int IsExist(int id);
 
+    // 修改职工
+    void Mod_Emp();
+
     // 析构函数
     ~EmpoloyeeManager();
 };
